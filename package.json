@@ -1,0 +1,41 @@
+{
+  "name": "helloelectron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "devDependencies": {
+    "babelify": "^6.1.1",
+    "browser-sync": "^2.18.5",
+    "browserify": "^10.2.1",
+    "electron-connect": "^0.6.1",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1",
+    "jstransform": "^11.0.3",
+    "livereload": "^0.6.0",
+    "material-ui": "^0.16.5",
+    "react": "^15.4.1",
+    "react-bootstrap": "^0.30.7",
+    "react-dom": "^15.4.1",
+    "react-logger": "^1.1.0",
+    "react-redux": "^5.0.1",
+    "react-router": "^3.0.0",
+    "react-router-redux": "^4.0.7",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^1.14.0"
+  },
+  "scripts": {
+    "build": "browserify --debug --transform babelify app.jsx --outfile bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-star-rating-component": "^1.2.2"
+  }
+}
