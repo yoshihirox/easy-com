@@ -5,7 +5,6 @@ import App from './app.jsx';
 
 const routes = (
     <Route path="/" component={App}>
-        <IndexRoute />
     </Route>
     )
 

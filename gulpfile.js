@@ -14,10 +14,11 @@ gulp.task('start',function(){
     gulp.watch(['./public/js/*.js'],electron.reload);
     gulp.watch(['./main.js'],electron.restart);
     gulp.watch(['./build/bundle.js'], electron.reload);
+    gulp.watch(['./src/**/*.jsx'], electron.reload);
 });
 
 gulp.task('browserify', function(){
-  browserify('./src/app.jsx', {debug:true})
+  browserify('./src/components/index.jsx', {debug:true})
     .transform(babelify)
     .bundle()
     .on("error", function(err){ console.log("Error : "+ err.message);})
@@ -26,7 +27,7 @@ gulp.task('browserify', function(){
 });
 
 gulp.task('watch', function(){
-  gulp.watch(['./src/*.jsx','./jsx/*.jsx'], ['browserify']);
+  gulp.watch(['./src/**/*.jsx','./src/*.jsx','./jsx/*.jsx'], ['browserify']);
   gulp.watch('./public/*.html',['bs-reload']);
 });
 
