@@ -10,16 +10,16 @@ import routes from './routes.jsx'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
 //material ui component
 import RaisedButton from 'material-ui/RaisedButton';
 
-
-
+//import component
+import ChordCard from './ChordCard.jsx';
+import TestContainer from '../containers/testRedux.jsx'
 
 
 console.log("hello bundle");
-
+injectTapEventPlugin();
 
 const style ={
     margin: 12,
@@ -30,8 +30,9 @@ export default class App extends Component{
         return(
                 <MuiThemeProvider>
                 <div>
-                    isss
-                    <RaisedButton label="Play" style={style} /> 
+                    <RaisedButton label="add new chord" style={style} /> 
+                    <ChordCard />
+                    <TestContainer />
                 </div>
                 </MuiThemeProvider>
                 )

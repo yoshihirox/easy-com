@@ -13,8 +13,6 @@ gulp.task('start',function(){
     gulp.watch(['./public/*.html'],electron.reload);
     gulp.watch(['./public/js/*.js'],electron.reload);
     gulp.watch(['./main.js'],electron.restart);
-    gulp.watch(['./build/bundle.js'], electron.reload);
-    gulp.watch(['./src/**/*.jsx'], electron.reload);
 });
 
 gulp.task('browserify', function(){
@@ -24,6 +22,7 @@ gulp.task('browserify', function(){
     .on("error", function(err){ console.log("Error : "+ err.message);})
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('./build/'))
+  electron.reload();
 });
 
 gulp.task('watch', function(){
